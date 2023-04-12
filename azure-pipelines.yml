@@ -26,18 +26,18 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'ls -al /home/vsts/.local/bin/*'
-# - task: JFrogGenericArtifacts@1
-#   inputs:
-#     command: 'Upload'
-#     connection: 'jfrogartifactory-v2'
-#     specSource: 'taskConfiguration'
-#     fileSpec: |
-#       {
-#         "files": [
-#           {
-#             "pattern": "/home/vsts/.local/bin/*",
-#             "target": "hari-pypi-local/"
-#           }
-#         ]
-#       }
-#     failNoOp: true
+- task: JFrogGenericArtifacts@1
+  inputs:
+     command: 'Upload'
+     connection: 'jfrogartifactory-v2'
+     specSource: 'taskConfiguration'
+     fileSpec: |
+       {
+         "files": [
+           {
+             "pattern": "/home/vsts/.local/bin/*",
+             "target": "hari-pypi-local/"
+           }
+         ]
+       }
+     failNoOp: true
