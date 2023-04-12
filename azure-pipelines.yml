@@ -17,7 +17,7 @@ steps:
   inputs:
     artifactoryConnection: 'jfrogartifactory-v2'
     command: 'install'
-    arguments: '--verbose'
+    arguments: '-r requirements.txt'
     targetResolveRepo: 'hari-pypi'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
