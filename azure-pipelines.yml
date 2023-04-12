@@ -22,18 +22,22 @@ steps:
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-- task: JFrogGenericArtifacts@1
+- task: Bash@3
   inputs:
-    command: 'Upload'
-    connection: 'jfrogartifactory-v2'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "$(System.ArtifactsDirectory)/*",
-            "target": "hari-pypi-local/"
-          }
-        ]
-      }
-    failNoOp: true
+    targetType: 'inline'
+    script: 'ls -lart $(System.ArtifactsDirectory)'
+# - task: JFrogGenericArtifacts@1
+#   inputs:
+#     command: 'Upload'
+#     connection: 'jfrogartifactory-v2'
+#     specSource: 'taskConfiguration'
+#     fileSpec: |
+#       {
+#         "files": [
+#           {
+#             "pattern": "$(System.ArtifactsDirectory)/*",
+#             "target": "hari-pypi-local/"
+#           }
+#         ]
+#       }
+#     failNoOp: true
