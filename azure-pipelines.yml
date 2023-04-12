@@ -25,7 +25,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'ls -al /home/vsts/.local/bin/*'
+    script: 'ls -al /home/vsts/.local/lib/python3.10/site-packages/*'
 - task: JFrogGenericArtifacts@1
   inputs:
      command: 'Upload'
@@ -35,7 +35,7 @@ steps:
        {
          "files": [
            {
-             "pattern": "/home/vsts/.local/bin/*",
+             "pattern": "/home/vsts/.local/lib/python3.10/site-packages/*",
              "target": "hari-pypi-local/"
            }
          ]
