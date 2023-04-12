@@ -25,7 +25,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'ls -lart /home/vsts/work/1/s/*'
+    script: 'find / -name dist'
 # - task: JFrogGenericArtifacts@1
 #   inputs:
 #     command: 'Upload'
