@@ -17,8 +17,8 @@ steps:
   inputs:
     artifactoryConnection: 'jfrogartifactory-v2'
     command: 'install'
-    targetResolveRepo: 'harish-pypi'
+    arguments: '--verbose'
+    targetResolveRepo: 'hari-pypi'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
