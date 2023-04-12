@@ -31,8 +31,8 @@ steps:
       {
         "files": [
           {
-            "pattern": "dist/*",
-            "target": "hari-pypi-local"
+            "pattern": "$(System.ArtifactsDirectory)/*",
+            "target": "hari-pypi-local/"
           }
         ]
       }
