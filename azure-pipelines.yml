@@ -25,7 +25,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'find / -name dist'
+    script: 'sudo find / -name nltk*'
 # - task: JFrogGenericArtifacts@1
 #   inputs:
 #     command: 'Upload'
