@@ -35,7 +35,7 @@ steps:
 #       {
 #         "files": [
 #           {
-#             "pattern": "$(System.ArtifactsDirectory)/*",
+#             "pattern": "/home/vsts/.local/bin/*",
 #             "target": "hari-pypi-local/"
 #           }
 #         ]
