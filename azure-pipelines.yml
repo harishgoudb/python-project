@@ -22,4 +22,7 @@ steps:
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-- script: python -m build
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: 'python -m build'
