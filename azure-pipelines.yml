@@ -36,7 +36,7 @@ steps:
          "files": [
            {
              "pattern": "/home/vsts/.local/lib/python3.10/site-packages/*",
-             "target": "
+             "target": "hari-pypi-local"
            }
          ]
        }
