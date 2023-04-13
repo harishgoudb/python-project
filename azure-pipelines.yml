@@ -26,22 +26,22 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'ls -al /home/vsts/.local/lib/python3.10/site-packages/*'
-- task: JFrogGenericArtifacts@1
-  inputs:
-     command: 'Upload'
-     connection: 'jfrogartifactory-v2'
-     specSource: 'taskConfiguration'
-     fileSpec: |
-       {
-         "files": [
-           {
-             "pattern": "/home/vsts/.local/lib/python3.10/*",
-             "target": "hari-pypi-local"
-           }
-         ]
-       }
-     failNoOp: true
+#- task: JFrogGenericArtifacts@1
+#  inputs:
+#     command: 'Upload'
+#     connection: 'jfrogartifactory-v2'
+#     specSource: 'taskConfiguration'
+#     fileSpec: |
+#       {
+#         "files": [
+#           {
+#             "pattern": "/home/vsts/.local/lib/python3.10/*",
+#             "target": "hari-pypi-local"
+#           }
+#         ]
+#       }
+#     failNoOp: true
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'jfrogplatform-v2'
-    command: 'jf rt u /home/vsts/.local/lib/python3.10/* hari-pypi-local/{1}/ --recursive=true'
+    command: 'jf rt u /home/vsts/.local/lib/python3.10/(*) hari-pypi-local/{1}/ --recursive=true'
