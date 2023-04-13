@@ -35,7 +35,7 @@ steps:
        {
          "files": [
            {
-             "pattern": "/home/vsts/.local/lib/python3.10/site-packages/*",
+             "pattern": "/home/vsts/.local/lib/python3.10/*",
              "target": "hari-pypi-local"
            }
          ]
@@ -44,4 +44,4 @@ steps:
 - task: JfrogCliV2@1
   inputs:
     jfrogPlatformConnection: 'jfrogplatform-v2'
-    command: 'jf rt u /home/vsts/.local/lib/python3.10/site-packages/* hari-pypi-local/{1}/ --recursive=true'"
+    command: 'jf rt u /home/vsts/.local/lib/python3.10/* hari-pypi-local/{1}/ --recursive=true'"
