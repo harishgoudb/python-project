@@ -4,7 +4,7 @@
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
 updates:
- # Maintain dependencies for pipp
+ # Maintain dependencies for pip
  - package-ecosystem: "pip"
   directory: "/python-project"
   schedule:
