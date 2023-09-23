@@ -15,7 +15,7 @@ updates:
 registries:
  Artifactory:
   type: python-index
-  url: https://hts2.jfrog.io/artifactory/api/pypi/mspypi
+  url: https://hts2.jfrog.io/artifactory/api/pypi/git-pypi
   username: frogbot-dependabot
   password: ${{secrets.JF_ART_PASSWD}}
   replaces-base: true
